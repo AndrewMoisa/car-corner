@@ -1,5 +1,6 @@
 import { handleHeader } from "./logic/handlers/handleHeader.js";
 import { handlePosts } from "./logic/handlers/handlePosts.js";
+import { handleSinglePost } from "./logic/handlers/handleSinglePost.js";
 
 function router() {
   const path = window.location.pathname;
@@ -11,7 +12,11 @@ function router() {
       break;
     case "/posts.html":
       handleHeader();
-      handlePosts();
+      document.addEventListener("DOMContentLoaded", handlePosts);
+      break;
+    case "/post.html":
+      handleHeader();
+      document.addEventListener("DOMContentLoaded", handleSinglePost);
       break;
   }
 }

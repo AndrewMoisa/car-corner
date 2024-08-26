@@ -12,6 +12,24 @@
   --white: #fff;
 }
 
+/* CSS Utilities */
+
+.spinner {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 9px solid;
+  border-color: #dbdcef;
+  border-right-color: #6eacda;
+  animation: spinner-d3wgkg 1s infinite linear;
+}
+
+@keyframes spinner-d3wgkg {
+  to {
+    transform: rotate(1turn);
+  }
+}
+
 /* CSS Reset */
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
@@ -297,5 +315,174 @@ table {
   .ham-menu.active span:nth-child(3) {
     top: 50%;
     transform: translate(-50%, -50%) rotate(-45deg);
+  }
+}
+
+/* Blogs page */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--grey);
+}
+.post {
+  background-color: var(--white);
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1100px;
+  max-height: 300px;
+  padding: 2rem 1rem;
+}
+
+.post-text {
+  flex: 1;
+  max-width: 40%;
+}
+.post-text h3 {
+  font-family: var(--font-raleway);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+  /* margin-bottom: 2rem; */
+}
+
+.post-text p {
+  font-family: var(--font-merriweather);
+  font-size: 1rem;
+  color: var(--dark-blue);
+  margin: 2rem 0rem;
+}
+
+.post-text a {
+  font-family: var(--font-raleway);
+  font-size: 1rem;
+  color: var(--white);
+  text-decoration: none;
+  border-radius: 0.3125rem;
+  background: #6eacda;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 0.5rem 1rem;
+}
+
+.post-img img {
+  max-width: 100%; /* Scale down the image to fit within the container */
+  max-height: 250px; /* Set a maximum height for the image */
+  width: auto; /* Maintain the aspect ratio */
+  height: auto; /* Maintain the aspect ratio */
+  object-fit: cover; /* Crop the image to fit within the defined dimensions */
+  border-radius: 10px;
+}
+
+/* Blog page */
+
+.blog {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25rem;
+  padding: 2rem 2rem;
+  background-color: var(--white);
+  max-width: 1000px;
+}
+
+.blog h1 {
+  font-family: var(--font-raleway);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--dark-blue);
+}
+
+.blog h3 {
+  font-family: var(--font-raleway);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--dark-blue);
+}
+
+.blog p {
+  font-family: var(--font-merriweather);
+  font-size: 1rem;
+  margin: 0 auto;
+}
+
+.blog img {
+  width: 80%;
+}
+
+/* Modal  */
+#myImg {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover {
+  opacity: 0.7;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+
+  background-color: rgb(0, 0, 0)
+  background-color: rgba(0, 0, 0, 0.85);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  max-width: 70%;
+  background-color: #000;
+}
+
+#caption {
+  margin: 0 auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: var(--white);
+  padding: 1rem 0;
+}
+
+.close {
+  position:absolute;
+  color: var(--light-blue);
+  font-size: 2rem;
+  font-weight: bold;
+  top: 30px;
+  right: 60px;
+}
+
+.close:hover{
+  color: #000;
+  cursor: pointer;
+  text-decoration: none;
+}
+
+.modal-content, #caption {
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0)
+  }
+  to {
+    transform: scale(1)
   }
 }

@@ -1,7 +1,7 @@
 import { url } from "../../constants/constants.js";
 
-export async function fetchPosts() {
-  const posts = `${url}/posts`;
+export async function fetchPosts(page = 1) {
+  const posts = `${url}/posts?_embed&page=${page}`;
 
   const response = await fetch(posts);
 
@@ -10,5 +10,5 @@ export async function fetchPosts() {
     return results;
   }
 
-  throw new Error("There was an error fetching the jokes");
+  throw new Error("There was an error fetching the blogs");
 }
