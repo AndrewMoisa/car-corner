@@ -7,6 +7,6 @@ export async function handleHeader() {
     renderHeader();
     handleHamMenuClick();
   } catch (error) {
-    displayMessage("#collections-div", error.message);
+    displayMessage("header", error.message);
   }
 }

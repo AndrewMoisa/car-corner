@@ -12,7 +12,41 @@
   </head>
   <body>
     <header></header>
-    <main></main>
+    <main>
+      <section class="contact-container">
+        <div class="contact">
+          <h1>
+            Please get in touch and our expert support team will answer all your
+            questions.
+          </h1>
+          <h2>Our working hours are from 9:00 to 13:00</h2>
+          <!-- Add novalidate attribute to disable HTML5 validation -->
+          <form class="form" id="contactForm" novalidate>
+            <div class="form-group">
+              <label for="fullname">Full Name</label>
+              <input type="text" name="fullname" id="fullname" />
+              <span class="error-message" id="fullname-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" name="email" id="email" />
+              <span class="error-message" id="email-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject</label>
+              <input type="text" name="subject" id="subject" />
+              <span class="error-message" id="subject-error"></span>
+            </div>
+            <div class="form-group">
+              <label for="yourMsg">Your message</label>
+              <textarea name="yourMsg" id="yourMsg" minlength="50"></textarea>
+              <span class="error-message" id="message-error"></span>
+            </div>
+            <button class="primary-btn" type="submit">SEND</button>
+          </form>
+        </div>
+      </section>
+    </main>
     <footer>
       <p>Copright&copy; 2024 CarCorner</p>
     </footer>

@@ -4,10 +4,10 @@ export function renderHeader() {
   const header = constants.header;
 
   header.innerHTML = `<div class="header-content">
-                      <img class="mobile-img logo" src="/images/logo.png" alt="logo">
+                      <a href="/index.html"><img class="mobile-img logo" src="/images/logo.png" alt="logo"></a>
                       <nav class="nav-menu">
                       <a href="/index.html">Home</a>
-                      <a href="/posts.html">Blogs</a>
+                      <a href="/posts.html">Posts</a>
                       <img src="/images/logo.png" alt="logo" class="logo">
                       <a href="/contact.html">Contact</a>
                       <a href="/about.html">About</a>                 

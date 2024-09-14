@@ -4,6 +4,10 @@ export function renderPosts(data) {
   const container = constants.mainContainer;
   const posts = data;
 
+  const blogsContainer = document.createElement("section");
+  blogsContainer.className = "blogs-container";
+  container.appendChild(blogsContainer);
+
   posts.forEach((post) => {
     const postTitle = post.title.rendered;
     const postImage = post._embedded["wp:featuredmedia"][0].source_url;
@@ -31,6 +35,7 @@ export function renderPosts(data) {
     const readMoreLink = document.createElement("a");
     readMoreLink.href = `post.html?id=${post.id}`;
     readMoreLink.textContent = "Read more";
+    readMoreLink.className = "primary-btn";
     postTextElement.appendChild(readMoreLink);
 
     // Create the post-img element
@@ -48,6 +53,6 @@ export function renderPosts(data) {
     articleElement.appendChild(postImgElement);
 
     // Append the article to the container
-    container.appendChild(articleElement);
+    blogsContainer.appendChild(articleElement);
   });
 }
