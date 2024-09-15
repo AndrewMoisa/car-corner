@@ -3,6 +3,9 @@
 export function renderCarousel(posts) {
   const container = document.querySelector("main");
 
+  // Clear the main container
+  container.innerHTML = "";
+
   console.log(posts);
 
   // Create the main section title

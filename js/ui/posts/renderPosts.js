@@ -4,6 +4,8 @@ export function renderPosts(data) {
   const container = constants.mainContainer;
   const posts = data;
 
+  container.innerHTML = "";
+
   const blogsContainer = document.createElement("section");
   blogsContainer.className = "blogs-container";
   container.appendChild(blogsContainer);

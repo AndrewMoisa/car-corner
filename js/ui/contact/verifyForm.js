@@ -36,8 +36,12 @@ export function verifyFrom() {
     let isValid = true;
 
     // Validate Full Name
-    if (fullname.value.trim() === "") {
-      showErrorMessage(fullname, "Full Name is required.", fullnameError);
+    if (fullname.value.trim().length < 5) {
+      showErrorMessage(
+        fullname,
+        "Full Name must be at least 5 characters long.",
+        fullnameError
+      );
       isValid = false;
     } else {
       clearErrorMessage(fullname, fullnameError);
@@ -59,8 +63,12 @@ export function verifyFrom() {
     }
 
     // Validate Subject
-    if (subject.value.trim() === "") {
-      showErrorMessage(subject, "Subject is required.", subjectError);
+    if (subject.value.trim().length < 15) {
+      showErrorMessage(
+        subject,
+        "Subject must be at least 15 characters long.",
+        subjectError
+      );
       isValid = false;
     } else {
       clearErrorMessage(subject, subjectError);

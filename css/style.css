@@ -17,10 +17,15 @@
 body {
   background-color: var(--grey);
 }
-
+.loader-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 .loader {
-  width: 48px;
-  height: 48px;
+  width: 120px;
+  height: 120px;
   border: 5px solid #fff;
   border-bottom-color: #ff3d00;
   border-radius: 50%;
@@ -51,7 +56,7 @@ body {
 
 footer p {
   text-align: right;
-  margin: 2rem 0;
+  margin: 1.5rem;
 }
 
 @keyframes spinner-d3 {
@@ -221,6 +226,7 @@ table {
 .theme-button {
   position: absolute;
   right: 50px;
+  display: none; /* Uncomment this line to hide the theme button */
 }
 .search {
   margin: 0 auto;

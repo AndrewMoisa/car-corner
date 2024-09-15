@@ -7,6 +7,8 @@ export async function renderSinglePost(post) {
   const content = post.content.rendered;
   const postImage = post._embedded["wp:featuredmedia"][0]?.source_url;
 
+  container.innerHTML = "";
+
   document.title = title;
 
   // Create elements for the blog post
