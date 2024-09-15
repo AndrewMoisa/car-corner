@@ -283,6 +283,11 @@ table {
   max-width: 1100px;
   max-height: 300px;
   padding: 2rem 1rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.post:hover {
+  transform: scale(1.05); /* Enlarge slightly */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Add a shadow effect */
 }
 
 .post-text {
