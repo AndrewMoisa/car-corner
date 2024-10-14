@@ -1,6 +1,8 @@
 import * as constants from "../../constants/constants.js";
 
 export function renderPosts(data) {
+  console.log(data);
+
   const container = constants.mainContainer;
   const posts = data;
 

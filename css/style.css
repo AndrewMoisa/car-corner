@@ -17,6 +17,7 @@
 body {
   background-color: var(--grey);
 }
+
 .loader-container {
   display: flex;
   justify-content: center;
@@ -250,7 +251,17 @@ table {
   transform: translateY(-50%);
   width: 20px;
   height: 20px;
-  pointer-events: none;
+  cursor: pointer;
+}
+.close-icon {
+  display: none;
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 15px;
+  height: 15px;
+  cursor: pointer;
 }
 
 /* Theme button styles */

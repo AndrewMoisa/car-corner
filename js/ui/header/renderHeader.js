@@ -19,9 +19,10 @@ export function renderHeader() {
                       </div> 
                       </div>
                       <div class="header-extras">
-                      <div class="search">
-                      <input type="text" placeholder="Search">
-                      <img src="/images/search.svg" alt="search" class="search-icon">
+                      <div class="search" >
+                      <input type="text" id="searchInput" placeholder="Search for posts">
+                      <img id="searchButton" src="/images/search.svg" alt="search" class="search-icon">
+                      <img id="closeButton" src="/images/close.png" alt="close" class="close-icon">
                       </div>
                       <div class="theme-button">
                       <button id="theme-button">Dark Mode</button>
